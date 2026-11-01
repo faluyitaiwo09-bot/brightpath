@@ -1,0 +1,265 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body{
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/* Global */
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ ul {
+    margin: 0;
+    padding: 0;
+}
+
+.logo, nav a.active {
+    color: #fb923c;   /* a brighter, softer orange */
+}
+
+.button_1 {
+    display: inline-block;
+    color: #fff;
+    background: #fb923c;  /* a brighter, softer orange */
+    padding: 7px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 5px;  /* rounded corners */
+}
+
+/* Header */
+header{
+    background: #1e3a8a;
+    color:  #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid; 
+}
+
+header a{
+    color:  #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+
+header li{
+   float: left; 
+   display: inline;
+   padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a {
+    color: #fb923c;
+    font-weight: bold;
+}
+
+header a:hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+.dark{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Showcase */
+#showcase{
+    min-height: 400px;
+    background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.7)), url('img/showcase.jpg') no-repeat center center/cover;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+#showcase h1{
+    margin-top: 100px;
+    font-size: 55px;
+    margin-bottom: 10px;
+}
+
+#showcase p{
+    font-size: 20px;
+}
+
+/* Newsletter */
+#newsletter{
+    padding: 15px;
+    color: #fff;
+    background: #1e3a8a;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float: right;
+    margin-top: 15px;
+}
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+/* Boxes */
+#boxes{
+    margin-top: 20px;
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 30%;
+    padding: 10px;
+}
+
+aside#sidebar .quote input, aside#sidebar .quote textarea{
+    width: 90%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+/* Sidebar */
+aside#sidebar{
+    float: right;
+    width: 30%;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Main-Col */
+article#main-col{
+    float: left;
+    width: 65%;
+
+}
+
+/* Courses */
+ul#courses{
+    list-style: none;
+    padding: 20px;
+    border: #cccccc 1px solid;
+    margin-bottom: 5px;
+    background: #e6e6e6;
+}
+
+footer{
+    padding: 20px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #1e3a8a;
+    text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 850px) {
+    .container {
+        width: 92%;
+    }
+
+    header li {
+        padding: 0 12px;
+    }
+
+    #showcase h1 {
+        font-size: 44px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding-bottom: 20px;
+    }
+
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        float: none;
+        text-align: center;
+    }
+
+    header nav li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    #boxes .box,
+    article#main-col,
+    aside#sidebar {
+        width: 100%;
+    }
+
+    #showcase {
+        min-height: 340px;
+    }
+
+    #showcase h1 {
+        margin-top: 40px;
+        font-size: 36px;
+    }
+
+    #showcase p {
+        font-size: 16px;
+    }
+
+    #newsletter input[type="email"],
+    aside#sidebar .quote input,
+    aside#sidebar .quote textarea {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    #newsletter button,
+    .quote button {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #showcase h1 {
+        font-size: 28px;
+    }
+
+    #newsletter h1 {
+        font-size: 22px;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+}
